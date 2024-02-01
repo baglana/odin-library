@@ -25,14 +25,30 @@ function addBookToLibrary() {
 
 function displayBooks() {
     output.innerHTML = '';
-    for (const book of myLibrary) {
+    for (const ind in myLibrary) {
         const card = document.createElement('div');
+
+        const book = myLibrary[ind];
         const p = document.createElement('p');
         p.textContent = `${book.title} by ${book.author}`;
         card.appendChild(p);
+
+        const delBtn = document.createElement('button');
+        delBtn.setAttribute('data-ind', ind);
+        delBtn.onclick = deleteBookFromLibrary;
+        delBtn.textContent = '❌';
+        card.appendChild(delBtn);
+
         card.classList.add('card');
         output.appendChild(card);
     }
 };
 
 window.onload = displayBooks;
+
+function deleteBookFromLibrary(evt) {
+  const ind = evt.target.getAttribute('data-ind');
+  console.log('ind', ind);
+  myLibrary.splice(ind, 1);
+  displayBooks();
+}
