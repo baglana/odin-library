@@ -62,8 +62,6 @@ function getCardElement(ind) {
   
   isReadCheckbox.onclick = () => {
     book.toggleReadStatus();
-    console.log(book.isRead);
-    console.log(myLibrary);
   }
   card.appendChild(isReadCheckbox);
 
@@ -83,7 +81,6 @@ window.onload = displayBooks;
 
 function deleteBookFromLibrary(evt) {
   const ind = evt.target.getAttribute('data-ind');
-  console.log('ind', ind);
   myLibrary.splice(ind, 1);
   displayBooks();
 }
