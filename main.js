@@ -1,14 +1,21 @@
 const output = document.querySelector('.output');
 
-const myLibrary = ['hp1', 'hp2', 'hp3', 'hp4', 'hp5', 'hp6', 'hp7'];
+const hp1 = new Book('HP1', 'J.K.R');
+const hp2 = new Book('HP2', 'J.K.R');
+const hp3 = new Book('HP3', 'J.K.R');
 
-function Book() {
-  // the constructor...
+const myLibrary = [hp1, hp2, hp3];
+
+function Book(title, author) {
+  this.title = title;
+  this.author = author;
 }
 
 function addBookToLibrary() {
-  const input = prompt('Enter book title: ');
-  myLibrary.push(input);
+  const title = prompt('Enter book title: ');
+  const author = prompt('Enter book author: ');
+  const book = new Book(title, author)
+  myLibrary.push(book);
   displayBooks();
 }
 
@@ -16,9 +23,9 @@ function addBookToLibrary() {
     output.innerHTML = '';
     for (const book of myLibrary) {
         const card = document.createElement('div');
-        const title = document.createElement('p');
-        title.textContent = book;
-        card.appendChild(title);
+        const p = document.createElement('p');
+        p.textContent = `${book.title} by ${book.author}`;
+        card.appendChild(p);
         card.classList.add('card');
         output.appendChild(card);
     }
