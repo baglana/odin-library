@@ -19,3 +19,11 @@ output {
     align-items: center;
     justify-content: space-between;
 }
+
+.card p {
+    flex: 2;
+}
+
+.card input {
+    flex: 1;
+}
