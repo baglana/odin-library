@@ -6,9 +6,43 @@
     <link rel="stylesheet" href="style.css">
     <title>Odin Library</title>
     <script src="main.js" defer></script>
+    <script src="dialog.js" defer></script>
 </head>
 <body>
-    <button>Add</button>
-    <div class="output"></div>
+    <dialog id="dialog">
+        <form method="dialog">
+          <p>
+            <label for="title">
+              Title:
+              <input type="text" id="title" name="title" required />
+            </label>
+          </p>
+          <p>
+            <label for="author">
+              Author:
+              <input type="text" id="author" name="author"/>
+            </label>
+          </p>
+          <p>
+            <label for="pages">
+              Pages:
+              <input type="number" id="pages" name="pages"/>
+            </label>
+          </p>
+          <p>
+            <label for="isread">
+              Is read:
+              <input type="checkbox" id="isread" name="isread" />
+            </label>
+          </p>
+          <div>
+            <input type="submit" id="submit" value="Confirm" />
+          </div>
+        </form>
+      </dialog>
+      <p>
+        <button id="new">NEW BOOK</button>
+      </p>
+      <output></output>
 </body>
 </html>
