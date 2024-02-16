@@ -5,12 +5,22 @@ class Book {
   #isRead = false;
 
   constructor(title, author, pages, isRead) {
-    console.log(title, this.#title);
     this.#title = title;
-    console.log(title, this.#title);
     this.#author = author;
     this.#pages = pages;
     this.#isRead = isRead;
+  }
+
+  get title() {
+    return this.#title;
+  }
+
+  get author() {
+    return this.#author;
+  }
+
+  get isRead() {
+    return this.#isRead;
   }
 
   getInfo() {
