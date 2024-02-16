@@ -24,7 +24,10 @@ class Book {
   }
 
   getInfo() {
-    let info = `${this.#title} by ${this.#author}, ${this.#pages} pages`
+    let info = `${this.#title} by ${this.#author}`;
+    if (this.#pages) {
+      info += `, ${this.#pages} pages`;
+    }
     if (!this.#isRead) {
         info += ', not read yet'
     }
