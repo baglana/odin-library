@@ -7,25 +7,6 @@ const theHobbit = new Book('The Hobbit', 'J.R.R. Tolkien', 295, false)
 
 const myLibrary = [hp1, hp2, hp3, theHobbit];
 
-function Book(title, author, pages, isRead = false) {
-  this.title = title;
-  this.author = author;
-  this.pages = pages;
-  this.isRead = isRead;
-}
-
-Book.prototype.getInfo = function() {
-  let info = `${this.title} by ${this.author}, ${this.pages} pages`
-  if (!this.isRead) {
-      info += ', not read yet'
-  }
-  return info;
-}
-
-Book.prototype.toggleReadStatus = function() {
-  this.isRead = !this.isRead;
-}
-
 function addBookToLibrary() {
   const title = form.elements.namedItem('title').value;
   const author = form.elements.namedItem('author').value;
