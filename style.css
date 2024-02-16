@@ -16,6 +16,7 @@ output {
     background-color:antiquewhite;
     border: 1px solid gainsboro;
     min-height: 12.5rem;
+    min-width: fit-content;
     max-width: 3.125rem;
     text-align: center;
     display: flex;
