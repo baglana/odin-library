@@ -1,18 +1,22 @@
+:root {
+    font-size: 20px;
+}
+
 output {
-    min-height: 232px;
-    padding: 20px;
+    min-height: 14.5rem;
+    padding: 1.25rem;
     padding-bottom: 0;
     display: inline-grid;
     grid-auto-flow: column;
-    gap: 20px;
-    border-bottom: 10px solid burlywood;
+    gap: 1.25rem;
+    border-bottom: 0.625rem solid burlywood;
 }
 
 .card {
     background-color:antiquewhite;
     border: 1px solid gainsboro;
-    min-height: 200px;
-    max-width: 50px;
+    min-height: 12.5rem;
+    max-width: 3.125rem;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -26,4 +30,8 @@ output {
 
 .card input {
     flex: 1;
+}
+
+button#new {
+    padding: 0.625rem;
 }
