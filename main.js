@@ -43,6 +43,7 @@ function getCardElement(ind) {
   
   isReadCheckbox.onclick = () => {
     book.toggleReadStatus();
+    displayBooks();
   }
   card.appendChild(isReadCheckbox);
 
